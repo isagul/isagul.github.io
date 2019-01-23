@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body{
+  background: url('assets/forest.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.App {
+  text-align: center;
+  .comingSoon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    span{
+      color:white;
+      font-weight: bold;
+      font-size: 24px;
+    }
+  }
+
+  h1 {
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+  }
+}
+
