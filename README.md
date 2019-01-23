@@ -1,1 +1,0 @@
-# isagul.github.io
