@@ -6,7 +6,6 @@ import './App.scss';
 
 class App extends Component {
   render() {
-    console.log(Date.now());
     return (
       <div className="App">
         <div className="comingSoon">
