@@ -2,23 +2,24 @@ import React, { Component } from 'react';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import Countdown from 'react-countdown-now';
 import Profile from './components/profile';
+import Skills from './components/skills';
+import Icons from './components/icons';
+import TwitterTimeline from './components/twitter-timeline';
+
 
 import './App.scss';
+import './styles/media.query.scss';
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <Profile/>
-        <div className="content">
-          <div className="icons">
-            <i class="fab fa-linkedin"></i>
-            <i class="fab fa-medium"></i>
-            <i class="fab fa-github-square"></i>
-          </div>
-        </div>
-        
-        
+      <div className="container index">
+          <Profile/>
+          <div className="index-content">
+            <Skills/>  
+            <TwitterTimeline/>
+          </div>          
+          <Icons/>
       </div>
     );
   }
