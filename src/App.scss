@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 @import './styles/media.query.scss';
 
 /* width */
@@ -49,19 +50,31 @@ body {
   grid-template-columns: 100px 1fr;
   grid-column-gap: 5%;
   margin-bottom: 5%;
+  
   img {
     border-radius: 50%;
     width:100px;
     margin-bottom: 10px;
   }
-  p{
-    color:white;
-    font-weight: bold;
-    text-shadow: 2px 2px black;
-    margin-top: 15px;
-    line-height: 15px;
-    font-family: 'Roboto', sans-serif;
+  .profile-info {
+    p{
+      color:white;
+      letter-spacing: 2px;
+      font-weight: bold;
+      text-shadow: 2px 2px black;
+      margin-top: 15px;
+      line-height: 15px;
+      font-family: 'Roboto', sans-serif;
+      
+      &:last-child {
+        float: right;
+        font-size: 12px;
+        font-family: 'Raleway', sans-serif;
+
+      }
+    }
   }
+  
 }
 
 .skills {
@@ -72,9 +85,11 @@ body {
     }
   }
   .skill-progress {
+    margin-top: 5%;
     display: grid;
     grid-template-columns: 30px 1fr 20px;
     grid-column-gap: 20px;
+    grid-row-gap: 10px;
     img{
       height:30px;
       background-color: black;
