@@ -1,6 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import './styles/media.query.scss';
 
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: orange; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
 html{
   height: 100%;
   margin: 0;
@@ -14,15 +36,19 @@ body {
   background: linear-gradient(to right, #00dbde, #fc00ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 } 
 
+.index-content {
+  display:grid;
+  grid-template-columns: 2fr 1fr;
+  grid-column-gap: 5%;
+}
+
+
 .profile{
   margin-top: 50px;
-  height:auto;
-  width: 300px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 20px;
-  text-align: center;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-column-gap: 5%;
+  margin-bottom: 5%;
   img {
     border-radius: 50%;
     width:100px;
@@ -30,22 +56,44 @@ body {
   }
   p{
     color:white;
+    font-weight: bold;
+    text-shadow: 2px 2px black;
     margin-top: 15px;
     line-height: 15px;
     font-family: 'Roboto', sans-serif;
   }
 }
 
+.skills {
+  h3{
+    color:white;
+    i {
+      margin-right: 3%;
+    }
+  }
+  .skill-progress {
+    display: grid;
+    grid-template-columns: 30px 1fr 20px;
+    grid-column-gap: 20px;
+    img{
+      height:30px;
+      background-color: black;
+      border-radius: 50%;
+    }
+    i{
+      font-size: 28px;
+    }
+    p{
+      color:orange;
+      font-weight: bold;
+    }
+  }
+  
+}
+
 .content {
   display: flex;
   flex-direction: row;
-}
-
-.twitter_timeline{
-  position: absolute;
-  bottom: 0;
-  right:20px;
-  flex:1;
 }
 
 .icons{
