@@ -5,9 +5,15 @@ export default class SocialIcons extends React.Component {
         return (
             <div className="content">
                 <div className="icons">
-                    <i className="fab fa-linkedin"></i>
-                    <i className="fab fa-medium"></i>
-                    <i className="fab fa-github-square"></i>
+                    <a href="https://github.com/isagul" target="_blank" rel="noopener noreferrer">
+                        <i className="fab fa-github-square"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/isa-gul/" target="_blank" rel="noopener noreferrer">
+                        <i className="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://medium.com/@isagul" target="_blank" rel="noopener noreferrer">
+                        <i className="fab fa-medium"></i>
+                    </a>
                 </div>
             </div>
         )

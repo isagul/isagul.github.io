@@ -50,7 +50,6 @@ body {
   grid-template-columns: 100px 1fr;
   grid-column-gap: 5%;
   margin-bottom: 5%;
-  
   img {
     border-radius: 50%;
     width:100px;
@@ -117,6 +116,7 @@ body {
   display: flex;
   justify-content: space-around;
   i {
+    color:black;
     font-size: 48px;
     transition: all 0.1s ease-out;
     &:hover{
