@@ -75,24 +75,24 @@ export default class Skills extends React.Component {
                 <h3> <i className="fas fa-hand-point-right"></i>     
                     MY SKILLS</h3>
                 <div className="skill-progress">  
-                    <i className="fab fa-html5"></i>
+                    <i className="fab fa-html5" title="html"></i>
                     <ProgressBar barValue = {this.state.htmlBar} /> 
                     <p>{this.state.htmlBar}%</p>
                       
-                    <i className="fab fa-css3-alt"></i>
+                    <i className="fab fa-css3-alt" title="css"></i>
                     <ProgressBar barValue = {this.state.cssBar} /> <p>{this.state.cssBar}%</p>                
-                    <i className="fab fa-js"></i>
+                    <i className="fab fa-js" title="javascript"></i>
                     <ProgressBar barValue = {this.state.jsBar} />
                     <p>{this.state.jsBar}%</p>
-                    <i className="fab fa-react"></i>
+                    <i className="fab fa-react" title="react"></i>
                     <ProgressBar barValue = {this.state.reactBar} />
                     <p>{this.state.reactBar}%</p>                            
-                    <i className="fab fa-angular"></i>
+                    <i className="fab fa-angular" title="angular"></i>
                     <ProgressBar barValue = {this.state.angularBar} /> <p>{this.state.angularBar}%</p>
-                    <i className="fab fa-sass"></i>
+                    <i className="fab fa-sass" title="sass"></i>
                     <ProgressBar barValue = {this.state.sassBar} /> <p>{this.state.sassBar}%</p>
-                    <img src={require('../assets/images/webpack.png')} alt ="webpack_image"/>
-                    <ProgressBar barValue = {this.state.webpackBar} /> <p>{this.state.webpackBar}%</p>
+                    <img src={require('../assets/images/webpack.png')} title="webpack" alt ="webpack_image"/>
+                    <ProgressBar  barValue = {this.state.webpackBar} /> <p>{this.state.webpackBar}%</p>
                 </div>
             </div>
         )

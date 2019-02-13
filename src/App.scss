@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Raleway');
-@import './styles/media.query.scss';
 
 /* width */
 ::-webkit-scrollbar {
@@ -41,6 +40,8 @@ body {
   display:grid;
   grid-template-columns: 2fr 1fr;
   grid-column-gap: 5%;
+ 
+  
 }
 
 

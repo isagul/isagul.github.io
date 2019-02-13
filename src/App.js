@@ -5,6 +5,7 @@ import TwitterTimeline from './components/twitter-timeline';
 import Skills from './components/skills';
 
 import './App.scss';
+import './styles/media.query.css';
 
 class App extends Component {
   render() {
