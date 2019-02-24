@@ -1,5 +1,7 @@
 import React from 'react';
 import {Line} from 'rc-progress';
+import {Animated} from "react-animated-css";
+
 
 export default class Skills extends React.Component {
     constructor(props) {
@@ -74,7 +76,7 @@ export default class Skills extends React.Component {
         this.stopInterval(this.state.cssBar, 75,this.cssInt);
         this.stopInterval(this.state.htmlBar, 85,this.htmlInt);
         this.stopInterval(this.state.angularBar, 75,this.angularInt);
-        this.stopInterval(this.state.sassBar, 85,this.sassInt);
+        this.stopInterval(this.state.sassBar, 75,this.sassInt);
         this.stopInterval(this.state.webpackBar, 75,this.webpackInt);
     }
 
@@ -118,26 +120,28 @@ export default class Skills extends React.Component {
                     My Skills</h3>
                 {
                     isShowSkill && 
+                    <Animated animationIn="bounceInLeft" animationOut="fadeOut" isVisible={true}>
                         <div className='skill-progress'>  
-                        <i className="fab fa-html5" title="html"></i>
-                        <ProgressBar barValue = {this.state.htmlBar} /> 
-                        <p>{this.state.htmlBar}%</p>
-                          
-                        <i className="fab fa-css3-alt" title="css"></i>
-                        <ProgressBar barValue = {this.state.cssBar} /> <p>{this.state.cssBar}%</p>                
-                        <i className="fab fa-js" title="javascript"></i>
-                        <ProgressBar barValue = {this.state.jsBar} />
-                        <p>{this.state.jsBar}%</p>
-                        <i className="fab fa-react" title="react"></i>
-                        <ProgressBar barValue = {this.state.reactBar} />
-                        <p>{this.state.reactBar}%</p>                            
-                        <i className="fab fa-angular" title="angular"></i>
-                        <ProgressBar barValue = {this.state.angularBar} /> <p>{this.state.angularBar}%</p>
-                        <i className="fab fa-sass" title="sass"></i>
-                        <ProgressBar barValue = {this.state.sassBar} /> <p>{this.state.sassBar}%</p>
-                        <img src={require('../assets/images/webpack.png')} title="webpack" alt ="webpack_image"/>
-                        <ProgressBar  barValue = {this.state.webpackBar} /> <p>{this.state.webpackBar}%</p>
-                    </div>
+                            <i className="fab fa-html5" title="html"></i>
+                            <ProgressBar barValue = {this.state.htmlBar} /> 
+                            <p>{this.state.htmlBar}%</p>
+                            
+                            <i className="fab fa-css3-alt" title="css"></i>
+                            <ProgressBar barValue = {this.state.cssBar} /> <p>{this.state.cssBar}%</p>                   
+                            <i className="fab fa-js" title="javascript"></i>
+                            <ProgressBar barValue = {this.state.jsBar} />
+                            <p>{this.state.jsBar}%</p>
+                            <i className="fab fa-react" title="react"></i>
+                            <ProgressBar barValue = {this.state.reactBar} />
+                            <p>{this.state.reactBar}%</p>                          
+                            <i className="fab fa-angular" title="angular"></i>
+                            <ProgressBar barValue = {this.state.angularBar} /> <p>{this.state.angularBar}%</p>
+                            <i className="fab fa-sass" title="sass"></i>
+                            <ProgressBar barValue = {this.state.sassBar} /> <p>{this.state.sassBar}%</p>
+                            <img src={require('../assets/images/webpack.png')} title="webpack" alt ="webpack_image"/>
+                            <ProgressBar  barValue = {this.state.webpackBar} /> <p>{this.state.webpackBar}%</p>
+                        </div>
+                    </Animated>
                 }
                 
             </div>

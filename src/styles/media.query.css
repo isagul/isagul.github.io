@@ -85,8 +85,14 @@
   }
 
   .profile-info {
-    margin-top: 3%;
+    margin-top: 8%;
     align-items: center;
+  }
+
+  .about-me div{
+    height: auto;
+    width: 90vw;
+    padding: 10%;
   }
   
 }

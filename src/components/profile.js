@@ -13,7 +13,7 @@ export default class Profile extends React.Component {
                         <p>Jr. Front-End Developer</p>    
                         <p>"I'm gonna start a revolution from my bed"</p>    
                     </div>
-                </div>   
+                </div>  
             </Animated>
         )
     }
