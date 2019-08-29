@@ -3,19 +3,18 @@ import React from 'react';
 export default class AboutMe extends React.Component {
     render(){
         return (
-            <div className="about-me">
+            <div className="about-me" id="about-me-area">
                 <div>
-                    <h4>BEN KİMİM ?</h4>
-                    <p>Merhaba ben İsa. </p>
-                    <p>Yolun henüz daha çok başlarında ama sürekli olarak araştırarak
-                    kendisini geliştirmeye çalışan 
-                    bir Front-End geliştiricisiyim. İstanbul'da yaşıyorum. Kendime web teknolojileri alanında
-                    bir kariyer hedefliyorum.
-                    </p>
-                    <p>Şu an ve önümüzdeki uzun bir süre kendimi front-end developer olarak tanımlasam da
-                        ileride full-stack developer olmak gibi hedeflerim var. Bu işlerin dışında da donanım programlama
-                        konusa da ilgim olduğunu söyleyebilirim ama bu daha çok hobi gibi. :)
-                    </p>                    
+                    <h4>
+                        <span className="curly-braces">{"{ "}</span>{"Hi I'm "} 
+                        <span className="my-name">Isa</span>
+                        <span className="curly-braces">{" }"}</span>
+                    </h4>
+                    <p>I live in Istanbul. I am a Front End developer building websites and web applications. 
+                        I interested in JavaScript and have professional experience working with Angular and React.
+                    </p>      
+                    <p>I also have use these technologies: HTML/Sass, TypeScript, Gulp, Webpack, ES6</p>
+                    <a href="https://twitter.com/isamigul?ref_src=twsrc%5Etfw" className="twitter-follow-button" data-show-count="false">Follow @isamigul</a><script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>            
                 </div>
             </div>
         )

@@ -1,12 +1,18 @@
 import React from 'react';
 import {Animated} from "react-animated-css";
 
+
+
 export default class Profile extends React.Component {
+
+    goToInfo() {
+        document.getElementById('about-me-area').scrollIntoView({behavior:'smooth'});
+    }
 
     render() {
         return (
             <Animated animationIn="bounceInDown" animationOut="fadeOut" isVisible={true}>
-                <div className="profile">
+                <div className="profile" onClick={this.goToInfo}>
                     <img src={require('../assets/images/profile_image.jpg')} alt="isa_gul_profile_image"/>
                     <div className="profile-info">
                         <p>İsa Gül</p>
