@@ -12,8 +12,8 @@ class App extends Component {
     return (
       <div>
         <div id="topDiv" className="app">
-          <Profile/>
-          <SocialIcons/>
+            <Profile/>
+            <SocialIcons/>
         </div>
         <AboutMe/>
         <ScrollButton buttonBackgroundColor={'#CF5050'} targetId={'topDiv'} behavior={'smooth'}/>

@@ -16,6 +16,9 @@ export default class SocialIcons extends React.Component {
                 <a href="https://twitter.com/isamigul" target="_blank" rel="noopener noreferrer">
                     <i className="fab fa-twitter-square"></i>
                 </a>
+                <a href="https://www.npmjs.com/settings/isagul/profile" target="_blank" rel="noopener noreferrer">
+                    <i className="fab fa-npm"></i>
+                </a>
             </div>
         )
     }
