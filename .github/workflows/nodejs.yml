@@ -21,8 +21,10 @@ jobs:
       - name: build
         run: |
           npm install
-          git config --global user.email isagul3477@gmail.com
-          git config --global user.name isagul
+          git config user.email $GH_MAIL
+          git config user.name $GH_USERNAME
           npm run deploy
         env:
           CI: true
+          GH_MAIL: isagul3477@gmail.com
+          GH_USERNAME: isagul 
