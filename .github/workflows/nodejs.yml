@@ -25,6 +25,6 @@ jobs:
           GH_USERNAME: isagul 
         run: |
           npm install
-          git config user.email ${{ GH_MAIL }} && git config user.name ${{ GH_USERNAME }}
+          git config user.email $GH_MAIL && git config user.name GH_USERNAME
           npm run deploy
         
