@@ -1,0 +1,39 @@
+.header-component {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    padding: 40px 40px;
+    height: 20%;
+    .header-list {    
+        display: flex;
+        justify-content: space-between;
+        .header-item {
+            color: white;
+            margin-left: 1rem;
+            display: inline-block;
+            position: relative;
+            &:first-child {
+                margin-left: 0;
+            }
+            &::after {
+                content: '';
+                display: block;
+                margin: auto;
+                height: 3px;
+                width: 0;
+                background: transparent;
+                transition: width .5s ease;
+            }
+            &:hover {
+                cursor: pointer;
+                &::after {
+                    width: 100%;
+	                background: #CF5050;
+                }
+            }
+        }
+        a {
+            margin-left: 1rem;
+        }
+    }
+}

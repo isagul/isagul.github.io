@@ -1,9 +1,12 @@
 import React from 'react';
+import './about_me.scss';
+import Header from './header'
 
-export default class AboutMe extends React.Component {
-    render(){
-        return (
-            <div className="about-me" id="about-me-area">
+const AboutMe = () => {
+    return (
+        <div className="app">
+            <Header />
+            <div className="about-me">
                 <div>
                     <h4>
                         <span className="curly-braces">{"{ "}</span>{"Hi I'm "} 
@@ -14,9 +17,11 @@ export default class AboutMe extends React.Component {
                         I interested in JavaScript and have professional experience working with Angular and React.
                     </p>      
                     <p>I also have use these technologies: HTML/Sass, TypeScript, Gulp, Webpack, ES6</p>
-                    <a href="https://twitter.com/isamigul?ref_src=twsrc%5Etfw" className="twitter-follow-button" data-show-count="false">Follow @isamigul</a><script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>            
+                    {/* <a href="https://twitter.com/isamigul?ref_src=twsrc%5Etfw" className="twitter-follow-button" data-show-count="false">Follow @isamigul</a><script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>             */}
                 </div>
             </div>
-        )
-    }
+        </div>
+    )
 }
+
+export default AboutMe;

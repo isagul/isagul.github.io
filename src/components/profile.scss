@@ -1,0 +1,49 @@
+.profile{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5%;
+    img {
+      border-radius: 50%;
+      height:120px;
+      width:120px;
+      margin-right: 5%;
+    }
+    .profile-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-left-color: #CF5050;
+      border-left-width: 1px;
+      border-left-style: solid;
+      padding-left: 5%;
+      width: 350px;
+      p{
+        color:white;
+        letter-spacing: 2px;
+        font-weight: bold;
+        text-shadow: 1px 1px black;
+        line-height: 15px;
+        font-family: 'Roboto', sans-serif;
+        
+        &:last-child {
+          float: right;
+          font-size: 10px;
+          font-family: 'Raleway', sans-serif;
+  
+        }
+      }
+    } 
+  }
+  
+  @media screen and (max-width: 420px) {
+    .profile{
+      margin-left:0;
+      img {
+        margin-right: 0;
+      }
+      .profile-info {
+        padding-left: 0;
+      }
+    }
+  }
+  

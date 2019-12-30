@@ -1,25 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Profile from './components/profile';
-
 import './App.scss';
 import './styles/media.query.css';
 import SocialIcons from './components/social-icons';
-import AboutMe from './components/about_me';
-import ScrollButton from 'react-scroll-button';
+import Header from './components/header';
 
-class App extends Component {
-  render() {
+const App = () => {
     return (
-      <div>
-        <div id="topDiv" className="app">
+      <div className="app">
+        <Header />
+        <div className="content">
             <Profile/>
             <SocialIcons/>
         </div>
-        <AboutMe/>
-        <ScrollButton buttonBackgroundColor={'#CF5050'} targetId={'topDiv'} behavior={'smooth'}/>
       </div>     
     );
-  }
 }
 
 export default App;
