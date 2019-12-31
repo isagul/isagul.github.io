@@ -11,9 +11,9 @@ const Header = () => {
                     <li className="header-item" onClick={() => history.push('/')}>isagul</li>
                 </div>
                 <div>
-                    <li className="header-item" onClick={() => history.push('/about-me')}>about</li>
-                    <a href="https://medium.com/@isagul" target="_blank"><li className="header-item">blog</li></a>
-                    <li className="header-item">projects</li>
+                    <li className="header-item" onClick={() => history.push('/about')}>about</li>
+                    <a href="https://medium.com/@isagul" rel="noopener noreferrer" target="_blank"><li className="header-item">blog</li></a>
+                    <li className="header-item" onClick={() => history.push('/projects')}>projects</li>
                 </div>                
             </div>
         </div>

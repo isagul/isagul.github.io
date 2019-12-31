@@ -1,7 +1,7 @@
 .profile{
     display: flex;
     flex-direction: row;
-    margin-bottom: 5%;
+    margin-bottom: 1%;
     img {
       border-radius: 50%;
       height:120px;
@@ -17,11 +17,15 @@
       border-left-style: solid;
       padding-left: 5%;
       width: 350px;
+      @media only screen and (max-width: 425px) {
+        border-left: none;
+        border-bottom: 1px solid;
+        border-bottom-color: rgba($color:  #CF5050, $alpha: 0.5);
+        margin-bottom: 1rem;
+      }
       p{
-        color:white;
+        color:black;
         letter-spacing: 2px;
-        font-weight: bold;
-        text-shadow: 1px 1px black;
         line-height: 15px;
         font-family: 'Roboto', sans-serif;
         

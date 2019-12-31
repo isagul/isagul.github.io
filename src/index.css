@@ -2,14 +2,20 @@ html{
   height: 100%;
 }
 
+body {
+  background-color: rgba(224, 230, 235, 0.5);
+  margin: 0;
+  padding: 0;
+}
+
 * {
   box-sizing: border-box;
 }
 
-body{
+/* body{
   background: url('./assets/images/foto2.jpg') no-repeat 50% fixed;
   background-size: cover;
-}
+} */
 
 /* html, body {
   max-width: 100%;

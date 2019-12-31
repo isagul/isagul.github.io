@@ -1,9 +1,14 @@
 .header-component {
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    width: 100%;
+    width: 80%;
     padding: 40px 40px;
     height: 20%;
+    align-self: center;
+    @media only screen and (max-width: 425px) {
+        width: 100%;
+        padding: 40px 20px;
+    }
     .header-list {    
         display: flex;
         justify-content: space-between;
