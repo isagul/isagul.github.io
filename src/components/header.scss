@@ -12,6 +12,9 @@
     .header-list {    
         display: flex;
         justify-content: space-between;
+        .header-left-side {
+            font-weight: bold;
+        }
         .header-item {
             color: white;
             margin-left: 1rem;

@@ -7,10 +7,10 @@ const Header = () => {
     return (
         <div className="header-component">
             <div className="header-list">
-                <div>
+                <div className="header-left-side">
                     <li className="header-item" onClick={() => history.push('/')}>isagul</li>
                 </div>
-                <div>
+                <div className="header-right-side">
                     <li className="header-item" onClick={() => history.push('/about')}>about</li>
                     <a href="https://medium.com/@isagul" rel="noopener noreferrer" target="_blank"><li className="header-item">blog</li></a>
                     <li className="header-item" onClick={() => history.push('/projects')}>projects</li>
