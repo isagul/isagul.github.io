@@ -1,11 +1,11 @@
 import React from 'react';
-import './profile.scss';
+import './style.scss';
 
 
 const Profile = () => {
     return (
         <div className="profile">
-            <img src={require('../assets/images/profile_image.jpg')} alt="isa_gul_profile_image"/>
+            <img src={require('../../assets/images/profile_image.jpg')} alt="isa_gul_profile_image"/>
             <div className="profile-info">
                 <p>İsa Gül</p>
                 <p>Front-End Developer</p>    

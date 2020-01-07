@@ -1,8 +1,8 @@
 import React from 'react';
-import './about_me.scss';
-import Header from './header'
+import './style.scss';
+import Header from '../header/index'
 
-const AboutMe = () => {
+const About = () => {
     return (
         <div className="app">
             <Header />
@@ -24,4 +24,4 @@ const AboutMe = () => {
     )
 }
 
-export default AboutMe;
+export default About;

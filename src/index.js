@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import AboutMe from './components/about_me';
-import Projects from './components/projects';
+import About from './components/about/index';
+import Projects from './components/projects/index';
 import * as serviceWorker from './serviceWorker';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faSmileWink } from '@fortawesome/free-solid-svg-icons'
@@ -15,7 +15,7 @@ ReactDOM.render(
     <BrowserRouter>
         <Switch>
             <Route exact path="/" component={App}></Route>
-            <Route path="/about" component={AboutMe}></Route>
+            <Route path="/about" component={About}></Route>
             <Route path="/projects" component={Projects}></Route>
         </Switch>
     </BrowserRouter>

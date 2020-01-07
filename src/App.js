@@ -1,9 +1,10 @@
 import React from 'react';
-import Profile from './components/profile';
+import Profile from './components/profile/index';
+import SocialIcons from './components/social/index';
+import Header from './components/header/index';
 import './App.scss';
 import './styles/media.query.css';
-import SocialIcons from './components/social-icons';
-import Header from './components/header';
+
 
 const App = () => {
     return (

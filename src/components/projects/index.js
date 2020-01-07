@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from './header'
-import './projects.scss';
+import Header from '../header/index';
+import './style.scss';
 
 const Projects = () => {
     const myProjects = [
