@@ -12,11 +12,11 @@
     .header-list {    
         display: flex;
         justify-content: space-between;
+        align-items: center;
         .header-left-side {
             font-weight: bold;
         }
         .header-item {
-            color: white;
             margin-left: 1rem;
             display: inline-block;
             position: relative;
@@ -42,6 +42,9 @@
         }
         a {
             margin-left: 1rem;
+        }
+        .theme-icon {
+            cursor: pointer;
         }
     }
 }

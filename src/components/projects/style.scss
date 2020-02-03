@@ -1,7 +1,7 @@
 .header-component {
     .header-list {
         .header-item {
-            color:black;
+            // color:black;
         }
     }
 }
@@ -28,7 +28,6 @@
                 .project-name {
                     font-weight: bold;
                     font-size: 1.1rem;
-                    color:black;
                     position: relative;
                     width: max-content;  
                     margin-bottom: 0;   
@@ -71,7 +70,6 @@
             }       
         }  
         .project-detail{
-            color: rgb(74, 85, 104);
             font-size: 0.7975rem;
         }              
     }
