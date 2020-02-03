@@ -2,11 +2,13 @@
     display: flex;
     flex-direction: row;
     margin-bottom: 1rem;
+    width:100%;
+    justify-content: center;
     img {
       border-radius: 50%;
       height:120px;
       width:120px;
-      margin-right: 5%;
+      margin-right: 10px;
     }
     .profile-info {
       display: flex;
@@ -15,7 +17,7 @@
       border-left-color: #CF5050;
       border-left-width: 1px;
       border-left-style: solid;
-      padding-left: 5%;
+      padding-left: 10px;
       width: 350px;
       @media only screen and (max-width: 425px) {
         border-left: none;
@@ -41,8 +43,11 @@
   @media screen and (max-width: 420px) {
     .profile{
       margin-left:0;
+      flex-direction: column;
       img {
         margin-right: 0;
+        height:80px;
+        width:80px;
       }
       .profile-info {
         padding-left: 0;

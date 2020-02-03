@@ -6,7 +6,8 @@ export const lightTheme = {
     projectNameColor: 'black',
     projectInfoColor: 'rgb(74, 85, 104)',
     projectBorderColor: '',
-    projectLiveColor: 'black'
+    projectLiveColor: 'black',
+    aboutBackgroundColor: '#262626b3'
 }
 
 export const darkTheme = {
@@ -15,7 +16,8 @@ export const darkTheme = {
     headerColor: 'white',
     projectHeaderColor: 'white',
     projectNameColor: '#CF5050',
-    projectInfoColor: 'white',
+    projectInfoColor: '#718096',
     projectBorderColor: '',
-    projectLiveColor: 'white'
+    projectLiveColor: 'white',
+    aboutBackgroundColor: '#15202B'
 }

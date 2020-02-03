@@ -38,5 +38,9 @@ export const GlobalStyles = createGlobalStyle`
   .live-link-text {
     color: ${({ theme }) => theme.projectLiveColor};
   }
+
+  .about-me div {
+    background: ${({ theme }) => theme.aboutBackgroundColor};
+  }
   
   `;

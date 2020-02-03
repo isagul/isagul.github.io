@@ -34,9 +34,9 @@ const Header = (props) => {
                 <div className="theme-icon" onClick={toggleTheme}>
                     {
                         theme === 'light' ?
-                            <img src={require('../../assets/images/sun.svg')} width="50" height="50" alt="Sun free icon" title="Moon free icon" />
+                            <img src={require('../../assets/images/sun.svg')} width="40" height="40" alt="Sun free icon" title="Moon free icon" />
                             :
-                            <img src={require('../../assets/images/night.svg')} width="50" height="50" alt="Moon free icon" title="Sun free icon" />
+                            <img src={require('../../assets/images/night.svg')} width="40" height="40" alt="Moon free icon" title="Sun free icon" />
                     }
                 </div>
             </div>
