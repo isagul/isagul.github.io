@@ -1,5 +1,5 @@
 export const lightTheme = {
-    body: 'lightgray',
+    body: '#EFF2F4',
     profileColor: '#363537',
     headerColor: 'black',
     projectHeaderColor: 'black',

@@ -1,12 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import './style.scss';
 
 const Header = (props) => {
     let history = useHistory();
-    const [theme, setTheme] = useState(localStorage.getItem('theme'));
-    const lightIcon = "https://image.flaticon.com/icons/svg/1164/1164954.svg";
-    const nightIcon = "https://image.flaticon.com/icons/svg/2033/2033921.svg";
+    const [theme, setTheme] = useState("light");
+
+    useEffect(() => {
+        let currentTheme = localStorage.getItem('theme');
+        if (currentTheme === null) {
+            localStorage.setItem('theme', 'light');
+        } else {
+            setTheme(currentTheme);
+        }
+    }, [theme])
 
     const toggleTheme = () => {
         props.toggleTheme();
@@ -25,12 +32,12 @@ const Header = (props) => {
                     <li className="header-item" onClick={() => history.push('/projects')}>projects</li>
                 </div>
                 <div className="theme-icon" onClick={toggleTheme}>
-                   {
-                       theme === 'light' ?
-                       <img src={nightIcon} width="50" height="50" alt="Sun free icon" title="Moon free icon" />
-                       :
-                       <img src={lightIcon} width="50" height="50" alt="Moon free icon" title="Sun free icon" />
-                   }
+                    {
+                        theme === 'light' ?
+                            <img src={require('../../assets/images/sun.svg')} width="50" height="50" alt="Sun free icon" title="Moon free icon" />
+                            :
+                            <img src={require('../../assets/images/night.svg')} width="50" height="50" alt="Moon free icon" title="Sun free icon" />
+                    }
                 </div>
             </div>
         </div>

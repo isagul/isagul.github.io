@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from '../header/index';
 import App from '../../App';
 import './style.scss';
 
@@ -34,14 +33,12 @@ const Projects = () => {
 
     return (
         <App>
-            <div className="app">
-                <div className="info">
-                    <h1>My Open Source Projects</h1>
-                    <p>I am passionate about open source software and giving back to others.</p>
-                </div>
-                <div className="projects">
-                    {projects}
-                </div>
+            <div className="info">
+                <h1>My Open Source Projects</h1>
+                <p>I am passionate about open source software and giving back to others.</p>
+            </div>
+            <div className="projects">
+                {projects}
             </div>
         </App>
     )

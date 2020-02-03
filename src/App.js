@@ -12,8 +12,12 @@ const App = (props) => {
 
   useEffect(() => {
     let currentTheme = localStorage.getItem('theme');
-    setTheme(currentTheme);
-  }, []);
+    if (currentTheme === null) {
+      localStorage.setItem('theme', 'light');
+    } else {
+      setTheme(currentTheme);
+    }
+  }, [theme]);
 
   function changeTheme(){
     let currentTheme = localStorage.getItem('theme');
