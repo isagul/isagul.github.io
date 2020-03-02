@@ -7,18 +7,18 @@ import Home from './components/home/index';
 import * as serviceWorker from './serviceWorker';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faSmileWink } from '@fortawesome/free-solid-svg-icons'
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import {HashRouter as Router, Switch, Route} from 'react-router-dom';
 
 library.add(faSmileWink);
 
 ReactDOM.render(
-    <BrowserRouter>
+    <Router>
         <Switch>
             <Route exact path="/" component={Home}></Route>
-            <Route path="/about" component={About}></Route>
-            <Route path="/projects" component={Projects}></Route>
+            <Route exact path="/about" component={About}></Route>
+            <Route exact path="/projects" component={Projects}></Route>
         </Switch>
-    </BrowserRouter>
+    </Router>
     , document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
