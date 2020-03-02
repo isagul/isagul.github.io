@@ -48,7 +48,7 @@
                     text-decoration: none;
                 }
             }   
-            .project-live-link {
+            .project-live-link, .project-npm-link {
                 color: black;
                 text-decoration: none;
                 position: relative;
@@ -66,6 +66,9 @@
                         background: #000;
                     }
                     }
+                }
+                i {
+                    font-size: 24px;
                 }
             }       
         }  
