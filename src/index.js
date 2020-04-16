@@ -8,7 +8,7 @@ import Blog from './components/blog/index';
 import * as serviceWorker from './serviceWorker';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faSmileWink } from '@fortawesome/free-solid-svg-icons'
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {HashRouter as Router, Switch, Route} from 'react-router-dom';
 import {
     ABOUT, BLOG, HOME, PROJECT
 } from './constants/routes';
