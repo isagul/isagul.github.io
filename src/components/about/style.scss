@@ -1,9 +1,9 @@
 .about-me{
     background-size: cover;
-    height:80%;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: calc(100vh - 120px);
     .my-name {
       padding-left: 10px;
       padding-right: 10px;

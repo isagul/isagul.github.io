@@ -39,6 +39,12 @@
                 }
             }
         }
+        .active {
+            &::after {
+                width: 100%;
+                background: #CF5050;
+            }
+        }
         a {
             margin-left: 1rem;
         }

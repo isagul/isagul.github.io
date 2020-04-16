@@ -42,5 +42,21 @@ export const GlobalStyles = createGlobalStyle`
   .about-me div {
     background: ${({ theme }) => theme.aboutBackgroundColor};
   }
+
+  .blog-component {
+    .desc-area {
+      .title {
+        color: ${({ theme }) => theme.blogTitleColor}
+      }
+      .content {
+        color: ${({ theme }) => theme.blogContentColor}
+      }
+      .show-more {
+        p {
+          color: ${({ theme }) => theme.blogShowMoreColor}
+        }
+      }
+    }
+  }
   
   `;
