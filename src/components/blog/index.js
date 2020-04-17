@@ -1,9 +1,17 @@
 import React, {useState, useEffect} from 'react';
 import App from '../../App';
+import BounceLoader from "react-spinners/BounceLoader";
+import { css } from "@emotion/core";
 import './style.scss';
 
 const Blog = () => {
     const [stories, setStories] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    const override = css`
+        display: block;
+        margin: 0 auto;
+    `;
 
     useEffect(() => {
         fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@isagul')
@@ -11,12 +19,19 @@ const Blog = () => {
             .then(function (response) {
                 if (response.status === "ok") {
                     setStories(response.items);
+                    setLoading(false);
                 }
             })
     }, []);
 
     return (
         <App>
+            <BounceLoader
+                size={60}
+                color={"#CF5050"}
+                loading={loading}
+                css={override}
+            />
             <div className="blog-component">
                 {
                     stories.map((story, index) => {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from './styles/theme';
 import { GlobalStyles } from './styles/global';
@@ -10,14 +10,20 @@ import './styles/media.query.css';
 
 const App = (props) => {
   const [theme, setTheme] = useState('light');
+  const _isMounted = useRef(false);
 
   useEffect(() => {
     let currentTheme = localStorage.getItem('theme');
-    if (currentTheme === null) {
-      localStorage.setItem('theme', 'light');
-    } else {
-      setTheme(currentTheme);
+    if (!_isMounted.current) {
+      if (currentTheme === null) {
+        localStorage.setItem('theme', 'light');
+      } else {
+          setTheme(currentTheme);
+      }
     }
+    return (() => {
+      _isMounted.current = true;
+    })
   }, [theme]);
 
   function changeTheme() {
@@ -41,15 +47,15 @@ const App = (props) => {
           <div className="content">
             {props.children}
           </div>
+          <ScrollButton
+            targetId="header"
+            behavior={'smooth'}
+            buttonBackgroundColor={'#CF5050'}
+            iconType={'arrow-up'}
+            scrollSpeed="0.5s"
+            style={{ fontSize: '16px', outline: 'none' }}
+          />
         </div>
-        <ScrollButton
-          targetId="header"
-          behavior={'smooth'}
-          buttonBackgroundColor={'#CF5050'}
-          iconType={'arrow-up'}
-          scrollSpeed="0.5s"
-          style={{ fontSize: '16px', outline: 'none' }}
-        />
       </>
     </ThemeProvider>
   );
