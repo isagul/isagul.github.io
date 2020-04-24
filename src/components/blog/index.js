@@ -1,28 +1,18 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import App from '../../App';
 import BounceLoader from "react-spinners/BounceLoader";
+import BlogContent from '../../shared/blogContent';
 import { css } from "@emotion/core";
+import {useFetch} from '../../hooks/useFetch';
 import './style.scss';
 
 const Blog = () => {
-    const [stories, setStories] = useState([]);
-    const [loading, setLoading] = useState(true);
-
     const override = css`
         display: block;
         margin: 0 auto;
     `;
-
-    useEffect(() => {
-        fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@isagul')
-            .then(function (res) { return res.json(); })
-            .then(function (response) {
-                if (response.status === "ok") {
-                    setStories(response.items);
-                    setLoading(false);
-                }
-            })
-    }, []);
+    
+    const {data, loading} = useFetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@isagul');
 
     return (
         <App>
@@ -34,21 +24,18 @@ const Blog = () => {
             />
             <div className="blog-component">
                 {
-                    stories.map((story, index) => {
+                    data !== null && data.items.map((story, index) => {
                         const {title, link, content, thumbnail, categories} = story;
-                        let createdDiv = document.createElement('div');
-                        createdDiv.innerHTML = content;
+                        
                         return categories.length > 0 && (
-                            <div key={index} className="story-area">
-                                {!thumbnail.includes('stat') && <img className="thumbnail" src={thumbnail} alt={categories.join(' ')}/>}
-                                <div className="desc-area">
-                                    <p className="title">{title}</p> 
-                                    <p className="content">{createdDiv.getElementsByTagName('p')[0].innerText}...</p>         
-                                    <a className="show-more" href={link} target="_blank" rel="noopener noreferrer">
-                                        <p>More</p>
-                                    </a>
-                                </div>
-                            </div>
+                            <BlogContent 
+                                title={title} 
+                                link={link} 
+                                thumbnail={thumbnail} 
+                                content={content} 
+                                categories={categories}
+                                key={index}
+                            />
                         )
                     })
                 }
