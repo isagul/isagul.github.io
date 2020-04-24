@@ -27,7 +27,7 @@ const Blog = () => {
     return (
         <App>
             <BounceLoader
-                size={60}
+                size={50}
                 color={"#CF5050"}
                 loading={loading}
                 css={override}
@@ -38,7 +38,7 @@ const Blog = () => {
                         const {title, link, content, thumbnail, categories} = story;
                         let createdDiv = document.createElement('div');
                         createdDiv.innerHTML = content;
-                        return (
+                        return categories.length > 0 && (
                             <div key={index} className="story-area">
                                 {!thumbnail.includes('stat') && <img className="thumbnail" src={thumbnail} alt={categories.join(' ')}/>}
                                 <div className="desc-area">
