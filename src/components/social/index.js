@@ -13,7 +13,7 @@ const SocialIcons = () => {
             <a href="https://medium.com/@isagul" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-medium"></i>
             </a>
-            <a href="https://twitter.com/isamigul" target="_blank" rel="noopener noreferrer">
+            <a href="https://twitter.com/isagul_" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-twitter-square"></i>
             </a>
             <a href="https://www.npmjs.com/settings/isagul/profile" target="_blank" rel="noopener noreferrer">
